@@ -10,15 +10,16 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Our style sheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Homage to gardenroomsanctuary.co.uk using Bootstrap -->
 
     <!-- Header, Logo, and Navigation -->
-     <header class="bg-light ">
-        <div class="container-fluid">
-            <nav class="navbar navbar-light navbar-expand-md justify-content-start p-3" style="background-color: #e3f2fd;">
+     <header class="bg-light pb-0 shadow-bottom  sticky-top">
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-light navbar-expand-md justify-content-start p-1" 
+                style="background-color: #e3f2fd;">
 
                 <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" 
@@ -29,21 +30,22 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <img class="navbar-brand w-100 h-100" src="./img/Garden-Room-Logo.png">
-
+                <div class="navbar-brand">
+                    <img src="./img/Garden-Room-Logo.png" height="40">
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav navbar-expand-lg">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#posn-intro">Introduction</a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="#posn-carousel">Image carousel</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Carousel</a>
+                        <a class="nav-link" aria-current="page" href="#posn-grid">Gallery grid</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" aria-current="page" href="#posn-accordian">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -51,27 +53,35 @@
         </div>
     </header>
                     
-    <main class="container">
+    <main class=" p-0">
+        <div class="container-fluid p-0">
+
     <!-- Banner and Introduction -->
-    <section class="row"> 
-        <div class="col-md-6 w-100">
-            <img src="./img/Large-Garden-Room.webp" class="w-100"> 
+    <section class="row pb-5" id="posn-intro"> 
+        <div class="position-relative">
+            <img src="./img/Large-Garden-Room.webp" class=" img-fluid w-100 h-100" alt="Large Garden Room"> 
+
+            <div class="overlay-text position-absolute top-50 start-50 translate-middle w-100 text-center text-white">
+                <h1>GARDEN ROOMS</h1>
+                <h3>Your perfect garden space</h3>
+            </div>
         </div>  
     </section>
 
     <!-- Carousel Gallery -->
-     <section class="row">
-        <div class="col-md-6 ">
+     <section class="row pb-5" id="posn-gallery">
+        <div class="col">
+            <h3 class="col-md-6 p-2">Image Carousel</h3>
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="./img/Modern-Garden-Room.webp" class="d-block w-100 h-100" alt="...">
+                    <img src="./img/Modern-Garden-Room.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/Large-Garden-Room.webp" class="d-block w-100 h-100" alt="...">
+                    <img src="./img/Large-Garden-Room.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/Garden-Room-Summer-House-Lounge-768x512.webp" class="d-block w-100 h-100" alt="...">
+                    <img src="./img/Garden-Room-Summer-House-Lounge-768x512.webp" class="d-block w-100">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -87,12 +97,13 @@
      </section>
 
     <!-- Selection Links -->
-     <section class="row">
+     <section class="row pb-5" id="posn-links">
         <div class="col-md-6"></div>
      </section>
 
     <!-- Gallery Grid -->
-     <section class="row">
+     <section class="row pb-5" id="posn-grid">
+        <h3 class="col-12 p-2">Gallery Grid</h3>
         <div class="col-md-3">
             <img src="./img/5-768x576.webp" class="w-100 h-100">
         </div>
@@ -120,14 +131,58 @@
      </section>
 
     <!-- Contact Us (How do i get started) -->
-     <section class="row">
+     <section class="row" id="posn-contact">
         <div class="col-md-6"></div>
      </section>
+     </div>
     </main>
-    <footer>
-    <!-- Footer -->
-    </footer>
 
+    <!-- FAQ accordian -->
+    <section class="row pb-4" id="posn-accordian">
+        
+        <h3 >Frequently Asked Questions</h3>
+        <div class="accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseOne" 
+                    aria-expanded="true" 
+                    aria-controls="collapseOne">
+                Question 1: What is the purpose of an Accordion?
+            </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" 
+                aria-labelledby="headingOne" 
+                data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                The Accordion component is used to conserve vertical space by showing only one section of content at a time.
+            </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseTwo" 
+                    aria-expanded="false" 
+                    aria-controls="collapseTwo">
+                Question 2: How is the "single-open" feature enabled?
+            </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" 
+                aria-labelledby="headingTwo" 
+                data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                The attribute <code>data-bs-parent="#faqAccordion"</code> on the body elements links them all together, ensuring only one panel has the <code>.show</code> class at any given moment.
+            </div>
+            </div>
+        </div>
+        
+        </div>
+    </section>
 
     <!-- <div class="container">   
         <div class="row">
@@ -144,4 +199,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+<footer style="background-color: #e3f2fd;" class="pb-3 pt-3 shadow-top text-center">
+    <!-- <header class="bg-light pb-2"> -->
+        <div class="row justify-content-center">
+            <div class="col-4">
+                Address and image
+            </div>
+            <div class="col-4">
+                More info links
+            </div>
+            <div class="col-4">
+                Other page links
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="col-12 text-center">Copyright (c) 2025 This Company</p>
+        </div>
+</footer>
 </html>

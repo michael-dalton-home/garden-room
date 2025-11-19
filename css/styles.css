@@ -1,0 +1,13 @@
+* {
+  /* outline: 1px solid red !important; */
+}
+
+.shadow-top {
+  /* H-Offset | V-Offset | Blur | Spread | Color */
+  box-shadow: 0 -8px 10px -5px rgba(0, 0, 0, 0.2); 
+}
+
+.shadow-bottom {
+  /* H-Offset | V-Offset | Blur | Spread | Color */
+  box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.2); 
+}
