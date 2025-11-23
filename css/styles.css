@@ -1,6 +1,3 @@
-* {
-  /* outline: 1px solid red !important; */
-}
 
 .shadow-top {
   /* H-Offset | V-Offset | Blur | Spread | Color */
@@ -10,4 +7,57 @@
 .shadow-bottom {
   /* H-Offset | V-Offset | Blur | Spread | Color */
   box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.card-ena-hover {
+    transition: all 0.1s ease-in-out;
+}
+.card-ena-hover:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    z-index: 5;
+}
+
+.card-body, .hero-bk {
+    background-color: rgba(133, 191, 117, 0.697);
+}
+
+/* Ensure the svg decor is large enough  */
+svg {
+    overflow: hidden; 
+     /* Make the SVG slightly larger than its parent */
+    width: 101%;
+    height: 101%;
+
+    /* Use positioning to ensure it's centered and the extra 1% is clipped evenly */
+    position: relative;
+    /* left: -0.5%;
+    top: -0.5%; */
+
+    /* Always recommended for SVGs to eliminate baseline spacing: */
+    display: block;
+}
+
+h1, .title-overlay {
+    font-size: 6vw;
+}
+
+h2, .subtitle-overlay {
+    font-size: 4vw;
+}
+
+h3 {
+    font-size: 3vw;
+}
+
+.car-text {
+    background-color: rgba(0, 0, 0, 0.269);
+}
+
+#posn-grid {
+    background-color: gray;
+}
+
+card {
+    background-color: black;
 }
