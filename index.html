@@ -260,38 +260,60 @@
     </section>
     </main>
 
-    <!-- <div class="container">   
-        <div class="row">
-            <div class="col-md-6 col-xl-3 bg-info m-2" id="first-col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores, rem beatae possimus asperiores atque consequatur aliquid voluptas pariatur harum dicta unde iusto minima expedita accusantium hic. Corrupti, laboriosam earum?</div>
-            <div class="col-md-6 col-xl-3 bg-info m-2" id="first-col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores, rem beatae possimus asperiores atque consequatur aliquid voluptas pariatur harum dicta unde iusto minima expedita accusantium hic. Corrupti, laboriosam earum?</div>
-            <div class="col-md-6 col-xl-3 bg-info m-2" id="first-col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores, rem beatae possimus asperiores atque consequatur aliquid voluptas pariatur harum dicta unde iusto minima expedita accusantium hic. Corrupti, laboriosam earum?</div>
-            <div class="col-md-6 col-xl-3 bg-info m-2" id="first-col">
-                <img src="./zeynep-sumer-lk3F07BN8T8-unsplash.jpg" class="col-6 w-100 h-100">
+    <!-- Insert a modal to tell the viewer that this is not a real commerical page -->
+    <div class="modal" id="explanatory-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You're visiting a simulation!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>This page is a training exercise.</p>
+                    <p>It demonstrates web development techniques.</p>
+                    <p>In fairness to the real <strong>Garden Room Sanctuary</strong> site, follow the link below.</p>
+                    <p>All rights reserved.</p>
+                    <img src="./img/Garden-Room-Logo.png" height="50">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                        <a href="https://gardenroomsanctuary.co.uk/"class="btn btn-primary">Garden Room Sanctuary</a>
+                    </button>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Bootstrap framework javascript support -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Invoke my modal on page load to explain that this is not a real commerical page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myModalEl = document.getElementById('explanatory-modal');
+            var modal = new bootstrap.Modal(myModalEl);
+            modal.show();
+        });
+    </script>
 </body>
 <footer style="background-color: #31393e;" class="pb-3 pt-3 shadow-top text-center text-light">
-    <!-- <header class="bg-light pb-2"> -->
-        <div class="row justify-content-center">
-            <div class="col-4">
-                Address and image
-            </div>
-            <div class="col-4">
-                More info links
-            </div>
-            <div class="col-4">
-                Other page links
-            </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            Address and image
         </div>
+        <div class="col-4">
+            More info links
+        </div>
+        <div class="col-4">
+            Other page links
+        </div>
+    </div>
 
-        <div class="row">
-            <img src="./img/Garden-Room-Logo.png" class="pb-2 pt-2 w-25 center-block mx-auto" alt="Garden Room Logo">
-            <p class="col-12 text-center p-2">Copyright (c) 2025 This Company</p>
-        </div>
+    <div class="row">
+        <img src="./img/Garden-Room-Logo.png" class="pb-2 pt-2 w-25 center-block mx-auto" alt="Garden Room Logo">
+        <p class="col-12 text-center p-2">Copyright (c) 2025 This Company</p>
+    </div>
 </footer>
 </html>
